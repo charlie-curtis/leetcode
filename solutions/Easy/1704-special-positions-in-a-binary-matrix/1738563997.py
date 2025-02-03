@@ -1,0 +1,19 @@
+class Solution:
+    def numSpecial(self, mat: List[List[int]]) -> int:
+
+        rows = Counter()
+        cols = Counter()
+        m,n = len(mat), len(mat[0])
+
+        for i in range(m):
+            for j in range(n):
+                if mat[i][j] == 1:
+                    rows[i]+=1
+                    cols[j]+=1
+
+        ans =0
+        for i in range(m):
+            for j in range(n):
+                if mat[i][j] == 1 and rows[i] == cols[j] == 1:
+                    ans+=1
+        return ans
