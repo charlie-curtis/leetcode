@@ -9,8 +9,6 @@ class Solution:
                 if j == 0 or mat[i][j-1] != mat[i][j]:
                     C[mat[i][j]]+=1
 
-
-        
         ans = float('inf')
         for k,v in C.items():
             if v == m:
