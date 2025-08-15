@@ -6,7 +6,5 @@ while i <= 2**31 -1:
     i*=4
 class Solution:
     def isPowerOfFour(self, n: int) -> bool:
-        if n <= 0:
-            return False
 
         return n in good
