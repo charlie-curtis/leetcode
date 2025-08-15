@@ -1,13 +1,13 @@
 class Solution:
     def myPow(self, x: float, n: int) -> float:
-        @cache
         def do(x,n):
             if n == 0:
                 return 1
         
             if n % 2 == 1:
                 return x*do(x,n-1)
-            return do(x,n//2)*do(x,n//2)
+            R = do(x,n//2)
+            return R*R
 
         flag = n < 0
         if flag:
