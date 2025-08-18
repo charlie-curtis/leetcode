@@ -13,10 +13,8 @@ class Solution:
                         R = cards[i] - cards[i+1]
                     elif op == '+':
                         R = cards[i] + cards[i+1]
-                        pass
                     elif op == '*':
                         R = cards[i] * cards[i+1]
-                        pass
                     else:
                         if cards[i+1] == 0:
                             continue
