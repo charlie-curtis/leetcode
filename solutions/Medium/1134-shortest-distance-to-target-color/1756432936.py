@@ -21,8 +21,6 @@ class Solution:
             for j in range(3):
                 right_close[i][j] = last_seen[j]
 
-        
-
         out = []
         for i, target in queries:
             lv = left_close[i][target-1]
