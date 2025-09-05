@@ -9,19 +9,15 @@ class Solution:
         e = -1
         ans = 0
         for i in range(0, time+1):
-            #print(e)
-            #print(e)
             if C[i] > 0:
                 heapq.heappush(q, -C[i])
-                #print("adding", C[i])
             if e >= i:
                 continue
-            if e + .5 == time:
-                return ans
             if q and -q[0] >= i:
                 ans+=1
                 e = -heapq.heappop(q)
-                print("using", e)
+                if e == time:
+                    return ans
                 e-=.5
             else:
                 return -1
